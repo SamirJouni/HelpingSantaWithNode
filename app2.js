@@ -15,9 +15,15 @@ fs.readFile('./input.txt', (error, data) =>{
   basement = 0;
 
   for ( i = 0; i < directions.length; i++){
-    if (directions[i] === '('){}
-    else{}
-    if (){}
+    if (directions.charAt(i) === '('){
+      up++;
+    }
+    else{
+      down++;
+    }
+    if (((up-down) === 0 ) && ( up !== 0 )){
+      basement = i;
+    }
   }
   console.timeEnd('funchallenge');
   console.log('Santa, go to floor:', up - down);
