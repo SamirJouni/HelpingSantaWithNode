@@ -14,7 +14,7 @@ fs.readFile('./input.txt', (error, data) =>{
   down = 0,
   basement = 0;
 
-  for ( i = 0; i < directions.length; i++){
+  for (let i = 0; i < directions.length; i++){
     if (directions.charAt(i) === '('){
       up++;
     }
