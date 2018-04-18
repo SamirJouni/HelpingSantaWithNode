@@ -18,7 +18,7 @@ fs.readFile('./input.txt', (error, data) =>{
     if (directions.charAt(i) === '('){
       up++;
     }
-    else{
+    if (directions.charAt(i) === ')'){
       down++;
     }
     if (((up-down) === 0 ) && ( up !== 0 )){
@@ -26,6 +26,6 @@ fs.readFile('./input.txt', (error, data) =>{
     }
   }
   console.timeEnd('funchallenge');
-  console.log('Santa, go to floor:', up - down);
+  console.log('Santa, go to floor:', up, down);
   console.log('Santa, you will enter the basement at:', basement)
 })
