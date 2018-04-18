@@ -10,6 +10,7 @@ fs.readFile('./input.txt', (error, data) =>{
   console.time('funchallenge');
 
   var directions = data.toString();
+
   for (var up = -1, index = -2; index != -1; up++, index = directions.indexOf('(', index + 1));
   for (var down = -1, index = -2; index != -1; down++, index = directions.indexOf(')', index + 1));
 
