@@ -26,9 +26,7 @@ fs.readFile('./input.txt', (error, data) =>{
 
     if (floor === -1 ){
 
-      let basement = i + 1;
-
-      console.log('Santa, you will enter the basement at:', basement);
+      console.log('Santa, you will enter the basement at:', i + 1);
       break;
     }
   }
