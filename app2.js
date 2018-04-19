@@ -11,9 +11,10 @@ fs.readFile('./input.txt', (error, data) =>{
   console.time('funchallenge');
 
   var directions = data.toString(),
+      length = directions.length,
       floor = 0;
 
-  for (var i = 0; i < directions.length; i++){
+  for (var i = 0; i < length; i++){
 
     if (directions.charCodeAt(i) === 40){
 
