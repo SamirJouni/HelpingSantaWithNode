@@ -11,12 +11,12 @@ fs.readFile('./input.txt', (error, data) =>{
   console.time('funchallenge');
 
   var directions = data.toString(),
-      length = directions.length,
+      directionsLength = directions.length,
       floor = 0;
 
-  for (var i = 0; i < length; i++){
+  for (var position = 0; position < directionsLength; position++){
 
-    if (directions.charCodeAt(i) === 40){
+    if (directions.charCodeAt(position) === 40){
 
       floor++;
     }
@@ -27,7 +27,7 @@ fs.readFile('./input.txt', (error, data) =>{
 
     if (floor === -1 ){
 
-      console.log('Santa, you will enter the basement at:', i + 1);
+      console.log('Santa, you will enter the basement at:', position + 1);
       break;
     }
   }
